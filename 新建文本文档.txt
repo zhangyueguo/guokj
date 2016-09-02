@@ -1,1 +1,8 @@
 Enter file in which to save the key (/c/Users/D/.ssh/id_rsa):
+
+1.  先提交仓库  git add 
+
+2. git commit -m "说明"
+
+3.更新到远程仓库  git push -u origin master
+

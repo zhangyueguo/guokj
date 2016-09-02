@@ -16,14 +16,16 @@
   {
   	ini_set('display_error', On);
   }else{
-  	ini_set('display_error',off);
+  	ini_set('display_error',Off);
   }
-
+    
   include CORE.'/common/function.php';
 
-  include APP.'/guo.php';
+  include CORE.'/guo.php';
+ 
+  spl_autoload_register('\core\Guo::load');
 
-  guokj\app\Guo::run();
+  \core\Guo::run();
   
 
 ?>
