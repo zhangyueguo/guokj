@@ -14,9 +14,9 @@
 
   if(DEBUG)
   {
-  	ini_set('display_error', On);
+  	ini_set('display_error','On');
   }else{
-  	ini_set('display_error',Off);
+  	ini_set('display_error','Off');
   }
     
   include CORE.'/common/function.php';
