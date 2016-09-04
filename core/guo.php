@@ -8,10 +8,20 @@ class Guo{
 	static public function run()
 	{
 	    //echo "ok";
-		p('ok');
 	    $rout = new \core\lib\rout();
 	    //p($rout->contr);
 		//p($rout->action);
+		$controller = $rout->contr;
+		$action     = $rout->action;
+		$controllerfile = APP.'/Controller/'.$controller.'Controller.php';
+		$class = MODULE.'/'.$controller.'Controller';
+		if(is_file($controllerfile))
+		{
+		    include $controllerfile;
+            new MODULE.'/Controller/'.$controller();			
+		}else{
+			throw new \Exception('找不到控制器'.$controller);
+		}
 	}
 
 	static public function load($class)

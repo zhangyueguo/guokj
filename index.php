@@ -9,6 +9,7 @@
   //define('GUOKJ',__DIR__);   一样
   define('CORE',GUOKJ.'/core');
   define('APP',GUOKJ.'/app');
+  define('MODULE','app');
 
   define('DEBUG',true);
 
