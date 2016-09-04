@@ -7,9 +7,11 @@ class Guo{
 
 	static public function run()
 	{
-	    echo "ok";
-	    $rout = new \core\rout();
-	   
+	    //echo "ok";
+		p('ok');
+	    $rout = new \core\lib\rout();
+	    //p($rout->contr);
+		//p($rout->action);
 	}
 
 	static public function load($class)
