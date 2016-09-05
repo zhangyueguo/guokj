@@ -46,7 +46,7 @@ class rout
 				}
 				$i = $i + 2;
 			}
-			p($_GET);
+			//p($_GET);
 			
 		}else{
 			$contr = 'index';

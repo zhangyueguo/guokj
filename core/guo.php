@@ -7,18 +7,20 @@ class Guo{
 
 	static public function run()
 	{
-	    //echo "ok";
-	    $rout = new \core\lib\rout();
+	    $rout = new \core\lib\rout();      //路由类
 	    //p($rout->contr);
 		//p($rout->action);
 		$controller = $rout->contr;
 		$action     = $rout->action;
 		$controllerfile = APP.'/Controller/'.$controller.'Controller.php';
-		$class = MODULE.'/'.$controller.'Controller';
+		$class = MODULE.'\\Controller\\'.$controller.'Controller';
+		//p($class);exit;
 		if(is_file($controllerfile))
 		{
 		    include $controllerfile;
-            new MODULE.'/Controller/'.$controller();			
+            $dx = new $class();
+             
+            $dx->$action();			
 		}else{
 			throw new \Exception('找不到控制器'.$controller);
 		}
