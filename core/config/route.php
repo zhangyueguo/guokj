@@ -1,7 +1,7 @@
 <?php
 
 	return array(
-             'CTRL'=>'index',
+             'CONTR'=>'index',
               'ACTION'   =>'index'
 	);
 

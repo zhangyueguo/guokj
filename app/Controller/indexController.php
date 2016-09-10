@@ -5,7 +5,12 @@ class IndexController extends \core\guo{
 	
 	public function Index()
 	{
-		\core\lib\conf::get('CTRL','route');
+		$tmp = \core\lib\conf::get('CONTR','route');
+		
+		$model = new  \core\lib\model();
+		
+		var_dump($model);
+		
 		/* p('it is index');
 		$model = new \core\lib\model();
 		$sql = "select * from ceshi";

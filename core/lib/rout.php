@@ -1,5 +1,6 @@
 <?php
 namespace core\lib;
+use core\lib\conf;
 
 /**
 * 
@@ -33,7 +34,7 @@ class rout
 				$this->action = $patharr[1];
 				unset($patharr[1]);
 			}else{
-				$this->action = 'index';
+				$this->action = conf::get('ACTION',route);
 			}
 			//2.多余部分转化为 get
 			$count = count($patharr) + 2;
@@ -49,8 +50,8 @@ class rout
 			//p($_GET);
 			
 		}else{
-			$contr = 'index';
-			$action = 'index';
+			$contr = conf::get('CONTR',route);
+			$action = conf::get('ACTION',route);
 		}
 	}
 }
