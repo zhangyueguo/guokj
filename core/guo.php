@@ -9,6 +9,8 @@ class Guo{
 
 	static public function run()
 	{
+		\core\lib\log::init();
+		
 	    $rout = new \core\lib\rout();      //路由类
 	    //p($rout->contr);
 		//p($rout->action);
@@ -21,8 +23,8 @@ class Guo{
 		{
 		    include $controllerfile;
             $dx = new $class();
-             
-            $dx->$action();			
+            $dx->$action();		
+            \core\lib\log::log('controller'.$class.'  '.'action'.$action);			
 		}else{
 			throw new \Exception('找不到控制器'.$controller);
 		}

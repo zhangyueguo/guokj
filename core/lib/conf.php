@@ -7,9 +7,9 @@ class conf{
 	static public function get($name,$file)
 	{
 		/**
-		*1.ÅĞ¶ÏÅäÖÃÎÄ¼şÊÇ·ñ´æÔÚ
-		*2.ÅĞ¶ÏÅäÖÃÊÇ·ñ´æÔÚ
-		*3.»º´æÅäÖÃ
+		*1.åˆ¤æ–­é…ç½®æ–‡ä»¶æ˜¯å¦å­˜åœ¨
+		*2.åˆ¤æ–­é…ç½®æ˜¯å¦å­˜åœ¨
+		*3.ç¼“å­˜é…ç½®
 		*/
 		if(isset(self::$conf[$file]))
 		{
@@ -25,10 +25,10 @@ class conf{
 					self::$conf[$file] = $conf;
 					return $conf[$name];
 				}else{
-					throw new \Exception('Ã»ÓĞÕâ¸öÅäÖÃÏî'.$name);
+					throw new \Exception('æ²¡æœ‰è¿™ä¸ªé…ç½®é¡¹'.$name);
 				}
 			}else{
-				throw new \Exception('ÕÒ²»µ½ÅäÖÃÎÄ¼ş'.$file);
+				throw new \Exception('æ‰¾ä¸åˆ°é…ç½®æ–‡ä»¶'.$file);
 			}
 		}
 	}
@@ -47,7 +47,7 @@ class conf{
 				self::$conf[$file] = $conf;
 				return $conf;
 			}else{
-				throw new \Exception('ÕÒ²»µ½ÅäÖÃÎÄ¼ş'.$file);
+				throw new \Exception('æ‰¾ä¸åˆ°é…ç½®æ–‡ä»¶'.$file);
 			}
 		}
 	}
