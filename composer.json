@@ -1,0 +1,12 @@
+{
+  "name": "GUOKJ PHP",
+  "description":"PHP Framework",
+  "type":"Framework",
+  "Keywords":[
+      "PHP","PHP Framework"
+  ],
+  "require":{
+  	"php" :">=5.3.0",
+  	"filp/whoops":"*"
+  } 
+}
