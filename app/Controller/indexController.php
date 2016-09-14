@@ -9,7 +9,7 @@ class IndexController extends \core\guo{
 		
 		$model = new  \core\lib\model();
 		
-		var_dump($model);
+		//var_dump($model);
 		
 		/* p('it is index');
 		$model = new \core\lib\model();
@@ -19,7 +19,7 @@ class IndexController extends \core\guo{
 		
 		//创建视图
 		$data = "hellor word";
-		$title = "视图文件";
+		$title = "shitu wenjian";
 		$this->assign('title',$title);
 		$this->assign('data',$data);
 		$this->display('index/index.html');

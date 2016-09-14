@@ -10,16 +10,20 @@
   define('CORE',GUOKJ.'/core');
   define('APP',GUOKJ.'/app');
   define('MODULE','app');
-
   define('DEBUG',true);
+
+ include "vendor/autoload.php";
 
   if(DEBUG)
   {
-  	ini_set('display_error','On');
+      $whoops = new \whoops\Run;
+      $whoops->pushHandler(new \whoops\Handler\PrettyPageHandler);
+      $whoops->register();
+  	  ini_set('display_error','On');
   }else{
   	ini_set('display_error','Off');
   }
-    
+ 
   include CORE.'/common/function.php';
 
   include CORE.'/guo.php';
