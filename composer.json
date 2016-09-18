@@ -7,11 +7,21 @@
   ],
   "require":{
   	"php":">=5.3.0",
-  	"filp/whoops":"*"
+  	"filp/whoops":"*",
+    "symfony/var-dumper":"*"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
   },
   "autoload": {
     "psr-4": {
-      "core\\": "core/"
+      "app\\": "src/"
+    },
+    "namespaces": {
+      "Whoops\\":"vendor/filp/whoops/src"
     }
   }
 
