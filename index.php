@@ -31,12 +31,11 @@ use \Whoops\Handler\PrettyPageHandler;
       $whoops->pushHandler($option);
       $whoops->register();
 
-
   	  ini_set('display_error','On');
   }else{
   	ini_set('display_error','Off');
   }
-  dump($_SERVER);
+ // dump($_SERVER);
   //sssssa();
  
   include CORE.'/common/function.php';
