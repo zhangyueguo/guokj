@@ -26,9 +26,21 @@ class IndexController extends \core\guo{
 //		$this->assign('title',$title);
 //		$this->assign('data',$data);
 //		$this->display('index/index.html');
-		$model = new usermodel();
-		$res = $model->lists();
-		dump($res);
+//		$model = new usermodel();
+//		$res = $model->lists();
+//		dump($res);
+
+		//采用twig模板加载视图
+		$data = "shijie nihao";
+		$this->assign('data',$data);
+		$this->display('index.html');
+
+	}
+	public function test()
+	{
+		$data = "test";
+		$this->assign('data',$data);
+		$this->display('test.html');
 	}
 	public function ceshi()
 	{

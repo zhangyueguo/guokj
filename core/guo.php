@@ -63,8 +63,18 @@ class Guo{
 		$file = APP.'/views/'.$file;
 		if(is_file($file))
 		{
-			extract($this->assign);
-			include $file;
+			//extract($this->assign);              //php的函数  需要查询
+			//include $file;
+			\Twig_Autoloader::register();
+
+			$loader = new \Twig_Loader_Filesystem(APP.'/views');
+			//$loader = new \Twig_Loader_Filesystem($file);
+			$twig = new \Twig_Environment($loader, array(
+				'cache' => GUOKJ.'/log/twig',
+				'debug' => DEBUG
+			));
+			$template = $twig->loadTemplate('index.html');
+			$template->display($this->assign?$this->assign:'');
 		}
 	}
 	
